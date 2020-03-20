@@ -25,13 +25,13 @@ module "eks_workers" {
   namespace                          = "nextgen-cicd"
   stage                              = "dev"
   name                               = "eks"
-  instance_type                      = "t2.micro"
+  instance_type                      = "t2.medium"
   vpc_id                             = module.vpc.vpc-id
   subnet_ids                         = module.vpc.private-subnet-ids
   associate_public_ip_address        = "false"
   health_check_type                  = "EC2"
-  min_size                           = 1
-  max_size                           = 1
+  min_size                           = 3
+  max_size                           = 3
   wait_for_capacity_timeout          = "10m"
   # Makesure to check the Latest EKS AMI according to AWS Region
   image_id                           = "ami-0659775707e4a09bc"
