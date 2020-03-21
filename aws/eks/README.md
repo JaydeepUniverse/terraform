@@ -9,7 +9,7 @@
 ## Please keep in mind about below commented notes while changing names of name,cluster,environment else EKS,ASG,VPC all resources will be created but while running `kubectl get nodes` command it won't show any worker nodes 
 ```terraform
 provider "aws" {
-  region = "us-east-2" < region
+  region = "us-east-2" # region
 }
 
 module "vpc" {

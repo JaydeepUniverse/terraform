@@ -34,7 +34,7 @@ module "eks_workers" {
   max_size                           = 3
   wait_for_capacity_timeout          = "10m"
   # Makesure to check the Latest EKS AMI according to AWS Region
-  image_id                           = "ami-0659775707e4a09bc"
+  image_id                           = "ami-aaa"
   cluster_name                       = "nextgen-cicd-dev-eks-cluster"
   key_name                           = "nextgen-cicd-key"
   cluster_endpoint                   = module.eks_cluster.eks_cluster_endpoint
