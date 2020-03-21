@@ -1,6 +1,4 @@
-#### As this EFS will be going to mount on EKS worker nodes to maven libraries, in main.tf file here make sure to change the subnet and it's parameters which are used in EKS. 
-
-#### To get existing subnet details follow below steps
+#### Along with EFS creation we'd need to mount on subnet as well where we would going to use it, hence To get existing subnet details follow below steps
 - Import existing subnet details by adding below code to main.tf and 
 -   ```terraform
     resource "aws_subnet" "subnet-aaa" {
