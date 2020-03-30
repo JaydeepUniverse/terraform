@@ -37,3 +37,7 @@ module "eks_cluster" {
 }
 ```
 
+## If you want custom AMI then 
+- change `variable "use_custom_image_id"` to `true` in `/eks/modules/eks-cluster-workers/variables.tf`
+- and then change AMI ID here in main.tf file `/aws/eks/environment/dev/main.tf`
+
